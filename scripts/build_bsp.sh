@@ -83,20 +83,19 @@ python3 ./scripts/read_ports_json.py
 cp ports.json ../hdl/vendor/AnalogDevices/+AnalogDevices/
 
 # Updates
-cp scripts/matlab_processors.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/matlab_processors.tcl
-cp scripts/adi_project_xilinx.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/adi_project_xilinx.tcl
-cp scripts/system_project_rxtx.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/system_project_rxtx.tcl
-cp scripts/adi_build.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/adi_build.tcl
-cp scripts/adi_build_win.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/adi_build_win.tcl
+cp ../TargetingToolboxCommon/scripts/matlab_processors.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/matlab_processors.tcl
+#cp scripts/adi_project_xilinx.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/adi_project_xilinx.tcl
+cp ../TargetingToolboxCommon/scripts/system_project_rxtx.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/system_project_rxtx.tcl
+cp ../TargetingToolboxCommon/scripts/adi_build.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/adi_build.tcl
 
 # Copy fsbl files
-cp scripts/fsbl_build_zynq.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/fsbl_build_zynq.tcl
-cp scripts/fsbl_build_zynqmp.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/fsbl_build_zynqmp.tcl
-cp scripts/pmufw_zynqmp.tcl  ../hdl/vendor/AnalogDevices/vivado/projects/scripts/pmufw_zynqmp.tcl
-cp scripts/fixmake.sh  ../hdl/vendor/AnalogDevices/vivado/projects/scripts/fixmake.sh
+#cp scripts/fsbl_build_zynq.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/fsbl_build_zynq.tcl
+#cp scripts/fsbl_build_zynqmp.tcl ../hdl/vendor/AnalogDevices/vivado/projects/scripts/fsbl_build_zynqmp.tcl
+#cp scripts/pmufw_zynqmp.tcl  ../hdl/vendor/AnalogDevices/vivado/projects/scripts/pmufw_zynqmp.tcl
+#cp scripts/fixmake.sh  ../hdl/vendor/AnalogDevices/vivado/projects/scripts/fixmake.sh
 
 # Copy boot files
 mkdir ../hdl/vendor/AnalogDevices/vivado/projects/common/boot/
-cp -r scripts/boot/* ../hdl/vendor/AnalogDevices/vivado/projects/common/boot/
+cp -r ../TargetingToolboxCommon/scripts/boot/* ../hdl/vendor/AnalogDevices/vivado/projects/common/boot/
 
 echo 'puts "Skipping"' > ../hdl/vendor/AnalogDevices/vivado/library/axi_ad9361/axi_ad9361_delay.tcl
